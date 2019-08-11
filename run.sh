@@ -1,3 +1,6 @@
+mkdir checkpoints
+mkdir tests
+
 export PYTHONUNBUFFERED=0
 python style.py --style images/roda1.jpg \
   --checkpoint-dir checkpoints/ \
