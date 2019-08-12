@@ -1,0 +1,8 @@
+{
+  "project": "fast-style-transfer",
+  "machineType": "P5000",
+  "container": "cvalenzuelab/styletransfer",
+  "command": "YmFzaCBydW4uc2g=",
+  "workspace": "https://github.com/mathyouf/training_styletransfer.git",
+  "lastJobId": "jszv9weqx2yz5u"
+}
