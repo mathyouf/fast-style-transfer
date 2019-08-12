@@ -1,0 +1,1 @@
+paperspace jobs create --container cvalenzuelab/styletransfer --machineType P5000 --command 'bash run.sh' --workspace https://github.com/mathyouf/training_styletransfer.git
