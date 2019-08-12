@@ -5,7 +5,7 @@ python style.py --style examples/style/tsai1.jpg \
   --checkpoint-dir /artifacts \
   --vgg-path /styletransfer/data/imagenet-vgg-verydeep-19.mat \
   --train-path /datasets/coco/coco_train2014 \
-  --test examples/content/face.jpg \
+  --test examples/content/adam.jpg \
   --test-dir tests/ \
   --content-weight 1.5e1 \
   --checkpoint-iterations 1000 \
