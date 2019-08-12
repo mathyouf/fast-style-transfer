@@ -11,6 +11,6 @@ python style.py --style examples/style/tsai1.jpg \
   --checkpoint-iterations 1000 \
   --batch-size 69
 
-python evaluate.py --checkpoint /artifacts \
---in-path examples/content \
---out-path /artifacts --allow-different-dimensions
+# python evaluate.py --checkpoint /artifacts \
+# --in-path examples/content \
+# --out-path /artifacts --allow-different-dimensions
