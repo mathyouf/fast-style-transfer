@@ -4,6 +4,14 @@ import pygame, cv2, os, transferstyle
 # Instantiate the dirname variable so that we can load relative paths
 dirname = os.path.dirname(__file__)
 
+# Clear old images
+filelist1 = glob.glob(os.path.join(dirname, "cv2Translations/*.jpg"))
+filelist2 = glob.glob(os.path.join(dirname, "cv2Captures/*.jpg"))
+for f in filelist1:
+    os.remove(f)
+for f in filelist2:
+    os.remove(f)
+
 # Initialize all imported PyGame modules 
 pygame.init()
 
