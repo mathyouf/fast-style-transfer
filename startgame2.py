@@ -221,8 +221,13 @@ while GamePlaying:
             # Check if the mouse position is collidiing with the boundary (which is a pygame.Rect)
             if boundary.collidepoint(pygame.mouse.get_pos()):
 
-                # Call the styleCards_Render function to move the selected style up, with the index of the card that has been collided with
-                styleCards_Render(collide_index=index)
+                # Check if mouse if along the bottom of the screen
+                if pygame.mouse.get_pos()[1] > display_Height-10:
+                    print("Mouse is along the bottom, no click will be registered")
+                   
+                # If not, call the styleCards_Render function to move the selected style up, with the index of the card that has been collided with
+                else:
+                    styleCards_Render(collide_index=index)
 
         # Check if an event is equal to pygame.KEYDOWN, which is triggered by clicking a keyboard key
         if event.type == pygame.KEYDOWN:
