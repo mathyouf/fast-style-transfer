@@ -1,16 +1,8 @@
 # Import libraries pygame, opencv2, and others we'll be using for this application
-import pygame, cv2, os, transferstyle
+import pygame, cv2, os, random, transferstyle
 
 # Instantiate the dirname variable so that we can load relative paths
 dirname = os.path.dirname(__file__)
-
-# Clear old images
-filelist1 = glob.glob(os.path.join(dirname, "cv2Translations/*.jpg"))
-filelist2 = glob.glob(os.path.join(dirname, "cv2Captures/*.jpg"))
-for f in filelist1:
-    os.remove(f)
-for f in filelist2:
-    os.remove(f)
 
 # Initialize all imported PyGame modules 
 pygame.init()
@@ -208,6 +200,9 @@ styleCards_Boundaries = mainScreen_Render()
 # Instantiate GamePlaying variable as True to allow game loop to run
 GamePlaying = True
 
+# Instantiate variable total_Downtime
+total_Downtime = 0
+
 # Game loop that continues as long as GamePlaying == True
 while GamePlaying:
 
@@ -246,6 +241,12 @@ while GamePlaying:
             
             # Terminate the nearest loop which is the "for event" loop
             break
+
+    else:
+        total_Downtime += timedelta
+        if total_Downtime > 3:
+            styleCards_Render(collide_index=random.randint(0,6))
+            total_Downtime = 0
 
     # Call the currentPhoto_Render function to display the current photo on the screen during every event loop
     currentPhoto_Render()
