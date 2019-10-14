@@ -107,6 +107,9 @@ def styleCards_Render(collide_index):
     # Write above the cards "Select a style!"
     write_Text("Select a style!", (800, display_Height-440), (236,102,41), 60, "MinionPro-Regular")
 
+    # Write above the images the title "Artistic Style Transfer using Neural Networks"
+    write_Text("Artistic Style Transfer using Neural Networks", (450, 20), (228,22,141), 60, "MinionPro-Regular")
+
     # Create a for loop and enumerate the styles list
     for index, thumbnail in enumerate(styles):
 
